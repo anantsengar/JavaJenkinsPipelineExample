@@ -7,6 +7,7 @@ pipeline {
       }
     }
 
+
     stage('DockerBuild') {
       steps {
         dockerNode(dockerHost: 'tcp://localhost:1234', image: 'hello-world')
@@ -16,6 +17,6 @@ pipeline {
           }
         }
       }
-    }
   }
+}
 }
