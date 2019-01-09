@@ -10,11 +10,11 @@ pipeline {
 
     stage('DockerBuild') {
       steps {
-        dockerNode(dockerHost: 'tcp://localhost:1234', image: 'hello-world')
+        dockerNode(dockerHost: 'tcp://localhost:1234', image: 'busybox')
         {
-          withMaven {
+          
             sh 'echo $DOCKER_HOST'
-          }
+        }
         }
       }
   }
