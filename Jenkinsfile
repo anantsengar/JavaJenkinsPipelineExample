@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build Image') {
       steps {
-        dockerNode(dockerHost: 'tcp://192.168.2.215:2376/', image: 'anantsengar/dockerapp:1.0.0')
+        dockerNode(dockerHost: 'tcp://localhost:1234', image: 'anantsengar/dockerapp:1.0.0')
       }
     }
   }
