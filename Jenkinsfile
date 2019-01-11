@@ -8,7 +8,7 @@ pipeline {
     }
     stage('DockerBuild') {
       steps {
-        dockerNode(dockerHost: 'tcp://localhost:1234', image: 'busybox') {
+        dockerNode(dockerHost: 'tcp://localhost:2375', image: 'busybox') {
           sh 'echo $DOCKER_HOST'
         }
 
